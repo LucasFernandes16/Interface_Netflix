@@ -1,0 +1,136 @@
+:root{
+    --vermelho:#E50914;
+    --preta:#141414;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/* os elementos n vão ultrapassar as dimensões da caixa mantendo a mesma sempre no mesmo tamanho*/
+
+}
+
+/*elementos base*/
+body{
+    background: var(--preta);
+    font-family: 'Arial', Times, serif;
+    color: white;
+}
+
+header .container{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+   padding: 30px 15px 30px 0px;
+}
+
+header .logo{
+    color: var(--vermelho);
+    font-family: 'Arial Black', Times, serif;
+    font-size: 40px;
+}
+
+header nav a{
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+}
+
+header nav a:hover{
+    color: #fff;
+}
+
+/*Filme Principal*/
+
+.filme-principal{
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%), url('../img/capa-house.jpg');
+    
+    height: 400px;
+    background-size: cover;/*cover pega a area de cobertura da caixa*/
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .descricao{
+    margin-bottom: 40px;
+    margin-top: 10px;
+
+
+}
+
+.filme-principal .titulo{
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.filme-principal .botao{
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: rgba(255, 255, 255, 0.734);
+
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+
+    cursor: pointer; /*Quando passa em cima apearece a opcao de clicar*/
+}
+
+.botao:hover{
+    background-color: white;
+    color: black;
+    transition: .5s ease all;
+}
+
+.botao i{
+    margin-right: 8px;
+}
+
+.container{
+    margin-left: 20px;
+}
+
+.filme-principal .container{
+    width: 70%;
+}
+
+/*Carousel*/
+
+.box-filme img{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.caroussel-filmes{
+    margin-top: 5px;
+}
+
+.box-filme:hover{
+    border: white;
+}
+
+/*Responsividade*/
+
+@media screen and (max-width: 700px){
+    header .container{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .botao{
+        margin-top: 8px;
+        width: 300px;
+    }
+}
+
+@media screen and (min-width:1000px){
+    .descricao{
+        width: 50%;
+    }
+}
